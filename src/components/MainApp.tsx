@@ -15,9 +15,11 @@ import { DecoderPanel }   from "./DecoderPanel";
 import { ReferencePanel } from "./ReferencePanel";
 import { HistoryDrawer }  from "./HistoryDrawer";
 
-const PANEL = {
+import type { Variants } from "framer-motion";
+
+const PANEL: Variants = {
   hidden:  { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0,  transition: { duration: 0.2, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0,  transition: { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] } },
   exit:    { opacity: 0, y: -6, transition: { duration: 0.14 } },
 };
 
